@@ -1,5 +1,5 @@
 {
-    "name": "nz.co.beweb.ttsplugin-android",
+    "name": "nz.co.beweb.SpeechRecognitionPlugin",
     "version": "0.3.1",
     "cordova_name": "SpeechRecognitionPlugin",
     "description": "Text to speech plugin",
