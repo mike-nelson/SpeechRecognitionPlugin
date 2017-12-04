@@ -1,0 +1,27 @@
+{
+    "name": "nz.co.beweb.ttsplugin-android",
+    "version": "0.3.1",
+    "cordova_name": "SpeechRecognitionPlugin",
+    "description": "Text to speech plugin",
+    "license": "Apache 2.0",
+    "keywords": [
+        "cordova",
+        "tts",
+        "text",
+        "speech"
+    ], 
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mike-nelson/SpeechRecognitionPlugin.git"
+    },
+    "platforms": [
+        "android"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.1.0"
+        }
+    ],
+    "englishdoc": ""
+}
