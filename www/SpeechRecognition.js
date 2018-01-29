@@ -84,4 +84,12 @@ SpeechRecognition.prototype.abort = function() {
     exec(null, null, "SpeechRecognition", "abort", []);
 };
 
+SpeechRecognition.prototype.requestPermissionForMic = function(success, fail) {
+    exec(success, fail, "SpeechRecognition", "requestPermissionForMic", []);
+};
+
+SpeechRecognition.prototype.requestPermissionForRecognition = function(success, fail) {
+    exec(success, fail, "SpeechRecognition", "requestPermissionForRecognition", []);
+};
+
 module.exports = SpeechRecognition;

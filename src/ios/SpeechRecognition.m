@@ -33,6 +33,32 @@
 
 }
 
+- (void) requestPermissionForMic:(CDVInvokedUrlCommand*)command
+{
+    [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL granted) {
+        if (granted) {
+            CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"OK"];
+            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+        }else{
+            CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Mic not allowed"];
+            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+        }
+    }];
+}
+
+- (void) requestPermissionForRecognition:(CDVInvokedUrlCommand*)command
+{
+    [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL granted) {
+        if (granted) {
+            CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"OK"];
+            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+        }else{
+            CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Mic not allowed"];
+            [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+        }
+    }];
+}
+
 - (void) recognize
 {
     NSString * lang = [self.command argumentAtIndex:0];

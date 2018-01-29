@@ -16,5 +16,7 @@
 - (void) start:(CDVInvokedUrlCommand*)command;
 - (void) stop:(CDVInvokedUrlCommand*)command;
 - (void) abort:(CDVInvokedUrlCommand*)command;
+- (void) requestPermissionForRecognition:(CDVInvokedUrlCommand*)command;
+- (void) requestPermissionForMic:(CDVInvokedUrlCommand*)command;
 
 @end
